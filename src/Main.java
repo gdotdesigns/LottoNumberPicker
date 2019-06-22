@@ -10,7 +10,8 @@ public class Main {
         int index;
 
 
-    for(index = 0; index <= 5; index++) {
+
+        for(index = 0; index <= 5; index++) {
         matchFound = false;
         if (index < 5) {
             while (!matchFound) {
@@ -41,6 +42,5 @@ public class Main {
         System.out.println("Picking your lottery numbers now!!!");
         for(int a=0;a<=5;a++)
             System.out.println(intArray[a]);
-
     }
 }

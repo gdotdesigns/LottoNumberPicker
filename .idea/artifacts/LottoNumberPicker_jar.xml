@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="LottoNumberPicker:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/LottoNumberPicker_jar</output-path>
+    <root id="archive" name="LottoNumberPicker.jar">
+      <element id="module-output" name="LottoNumberPicker" />
+    </root>
+  </artifact>
+</component>
