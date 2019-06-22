@@ -16,7 +16,7 @@ public class Main {
             while (!matchFound) {
                 for (int num1 = 1; num1 <= 70; num1++) {
                     int num2 = randomnumber.nextInt(71);
-                    if (num1 == num2 && num2 !=0 && IntStream.of(intArray).noneMatch(n -> n == num2)) {
+                    if (num1 == num2 && IntStream.of(intArray).noneMatch(n -> n == num2)) {
                         matchFound = true;
                         intArray[index] = num2;
                         break;
@@ -29,7 +29,7 @@ public class Main {
             while(!matchFound) {
                 for (int num1 = 1; num1 <= 25; num1++) {
                     int num2 = randomnumber.nextInt(26);
-                    if (num1 == num2 && num2 != 0) {
+                    if (num1 == num2) {
                         intArray[index] = num2;
                         matchFound = true;
                     }
