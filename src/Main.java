@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         int intArray[] = new int[6];
         boolean matchFound;
-        Random randnumber = new Random();
+        Random randomnumber = new Random();
         int index;
 
 
@@ -15,11 +15,8 @@ public class Main {
         if (index < 5) {
             while (!matchFound) {
                 for (int num1 = 1; num1 <= 70; num1++) {
-                    int num2 = randnumber.nextInt(71);
-                    //System.out.println(num1 + " " + num2);
+                    int num2 = randomnumber.nextInt(71);
                     if (num1 == num2 && num2 !=0 && IntStream.of(intArray).noneMatch(n -> n == num2)) {
-                        //System.out.println("SUCCESS!!!!!!!!!!!!!!!!");
-                        //System.out.println(num1 + " " + num2);
                         matchFound = true;
                         intArray[index] = num2;
                         break;
@@ -31,7 +28,7 @@ public class Main {
         else{
             while(!matchFound) {
                 for (int num1 = 1; num1 <= 25; num1++) {
-                    int num2 = randnumber.nextInt(26);
+                    int num2 = randomnumber.nextInt(26);
                     if (num1 == num2 && num2 != 0) {
                         intArray[index] = num2;
                         matchFound = true;
