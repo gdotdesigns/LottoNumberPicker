@@ -17,9 +17,9 @@ public class Main {
                 for (int num1 = 1; num1 <= 70; num1++) {
                     int num2 = randnumber.nextInt(71);
                     //System.out.println(num1 + " " + num2);
-                    if (num1 == num2 && IntStream.of(intArray).noneMatch(n -> n == num2)) {
-                        System.out.println("SUCCESS!!!!!!!!!!!!!!!!");
-                        System.out.println(num1 + " " + num2);
+                    if (num1 == num2 && num2 !=0 && IntStream.of(intArray).noneMatch(n -> n == num2)) {
+                        //System.out.println("SUCCESS!!!!!!!!!!!!!!!!");
+                        //System.out.println(num1 + " " + num2);
                         matchFound = true;
                         intArray[index] = num2;
                         break;
@@ -28,6 +28,17 @@ public class Main {
 
         }
     }
+        else{
+            while(!matchFound) {
+                for (int num1 = 1; num1 <= 25; num1++) {
+                    int num2 = randnumber.nextInt(26);
+                    if (num1 == num2 && num2 != 0) {
+                        intArray[index] = num2;
+                        matchFound = true;
+                    }
+                }
+            }
+        }
 
         }
         System.out.println("Picking your lottery numbers now!!!");
