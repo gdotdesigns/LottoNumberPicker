@@ -9,10 +9,11 @@ public class Main {
         boolean matchFound;
         Random randomnumber = new Random();
         int index;
-        int totalBalls = 52;
+        int mainBallRange = 70;
         int loops = 0;
-        int count = 10000000;
-        int numbersToPick = 52;
+        int count = 10;
+        int numbersToPick = 5;
+        int powerBallRange=25;
 
 
         while (loops <= count) {
@@ -21,8 +22,8 @@ public class Main {
                 matchFound = false;
                 if (index < numbersToPick) {
                     while (!matchFound) {
-                        for (int num1 = 1; num1 <= totalBalls; num1++) {
-                            int num2 = randomnumber.nextInt(totalBalls + 1);
+                        for (int num1 = 1; num1 <= mainBallRange; num1++) {
+                            int num2 = randomnumber.nextInt(mainBallRange  + 1);
                             if (num1 == num2 && IntStream.of(intArray).noneMatch(n -> n == num2)) {
                                 matchFound = true;
                                 intArray[index] = num2;
@@ -33,11 +34,11 @@ public class Main {
                     }
                 } else {
                     while (!matchFound) {
-                        for (int num1 = 1; num1 <= 25; num1++) {
+                        for (int num1 = 1; num1 <= powerBallRange; num1++) {
                             int num2 = randomnumber.
-                                    nextInt(26);
+                                    nextInt(powerBallRange +1);
                             if (num1 == num2) {
-                                //intArray[index] = num2;
+                                intArray[index] = num2;
                                 matchFound = true;
                             }
                         }
