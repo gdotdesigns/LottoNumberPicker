@@ -9,11 +9,12 @@ public class Main {
         boolean matchFound;
         Random randomnumber = new Random();
         int index;
-        int mainBallRange = 70;
         int loops = 0;
-        int count = 10;
-        int numbersToPick = 5;
+        int count = 100_000_000;
+        int mainBallRange = 70;
+        int numbersToPick = 5; //Not including Power Ball/Mega Ball//
         int powerBallRange=25;
+        boolean pickPowerBall = true;
 
 
         while (loops <= count) {
@@ -33,7 +34,7 @@ public class Main {
 
                     }
                 } else {
-                    while (!matchFound) {
+                    while (!matchFound && pickPowerBall) {
                         for (int num1 = 1; num1 <= powerBallRange; num1++) {
                             int num2 = randomnumber.
                                     nextInt(powerBallRange +1);
@@ -47,8 +48,9 @@ public class Main {
 
             }
             System.out.println(loops);
-            if(loops < count - 1) {
+            if(loops < count) {
                 Arrays.fill(intArray,0);
+                System.out.println("Array deleted");
             }
             loops++;
 
