@@ -11,10 +11,10 @@ public class Main {
         int index;
         int loops = 0;
         int count = 100_000_000;
-        int mainBallRange = 70;
-        int numbersToPick = 5; //Not including Power Ball/Mega Ball//
-        int powerBallRange=25;
-        boolean pickPowerBall = true;
+        int mainBallRange = 52;
+        int numbersToPick = 6; //Not including Power Ball/Mega Ball//
+        int powerBallRange=26;
+        boolean pickPowerBall = false;
 
 
         while (loops <= count) {
@@ -50,7 +50,6 @@ public class Main {
             System.out.println(loops);
             if(loops < count) {
                 Arrays.fill(intArray,0);
-                System.out.println("Array deleted");
             }
             loops++;
 
